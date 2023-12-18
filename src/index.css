@@ -1,0 +1,43 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply text-neutral-800;
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@keyframes flash {
+  from{
+    color: orangered;
+    text-shadow:0px 1px orangered , 0px -1px orangered; 
+  }
+  to{
+    color: rgb(240,240,240);
+    text-shadow:0px 1px orangered , 0px -1px orangered; 
+  }
+}
+
+@keyframes fade-in {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: ravi;
+  src: url(./assets/font/Mahoor-Regular.ttf);
+}
+@font-face {
+  font-family: josefin;
+  src: url(./assets/font/JosefinSans-Regular.ttf);
+}
